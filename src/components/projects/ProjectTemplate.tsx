@@ -27,7 +27,7 @@ const pageVariants = {
       ease: "easeInOut"
     }
   }
-};
+} as any;
 
 export function ProjectTemplate({ project }: ProjectTemplateProps) {
   return (

@@ -77,7 +77,7 @@ export function StoryScroll({ data }: { data: ProjectData }) {
 
   return (
     <div ref={containerRef} className="relative w-full h-screen overflow-hidden bg-black text-white perspective-[1000px]">
-      {data.sections.map((section, idx) => {
+      {(data.sections || []).map((section, idx) => {
         const isDarker = idx % 2 !== 0;
         return (
           <div 
@@ -94,7 +94,7 @@ export function StoryScroll({ data }: { data: ProjectData }) {
             {/* Middle: Main Content */}
             <div className="flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full">
               {section.layout === "hero" ? (
-                <div className="text-center max-w-4xl mx-auto">
+                  <div className="text-center max-w-4xl mx-auto">
                   <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
                     {data.title}
                   </h1>
@@ -102,7 +102,7 @@ export function StoryScroll({ data }: { data: ProjectData }) {
                     {data.tagline}
                   </p>
                   <div className="flex flex-wrap items-center justify-center gap-4">
-                    {data.technologies.map(tech => (
+                    {(data.technologies || []).map(tech => (
                       <span key={tech} className="px-4 py-2 rounded-full border border-white/10 bg-[#111111] text-sm text-white/80">
                         {tech}
                       </span>

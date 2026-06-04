@@ -3,12 +3,24 @@ export interface ProjectFeature {
   description: string;
 }
 
+export interface ProjectSection {
+  id: string;
+  label: string;
+  heading: string;
+  layout?: "hero" | "right-content" | string;
+  content: string[];
+}
+
 export interface ProjectData {
   id: string;
   title: string;
   tagline: string;
   description: string;
   features: ProjectFeature[];
+  prevProject?: { id: string; title: string } | null;
+  nextProject?: { id: string; title: string } | null;
+  sections?: ProjectSection[];
+  technologies?: string[];
 }
 
 export const projects: ProjectData[] = [

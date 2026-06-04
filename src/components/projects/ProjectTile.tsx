@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ProjectData } from "./StoryScroll";
+import { ProjectData } from "@/lib/projects-data";
 
 interface ProjectTileProps {
   project: Pick<ProjectData, "id" | "title" | "description">;

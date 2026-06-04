@@ -70,7 +70,7 @@ const overlayVariants = {
       ease: [0.22, 1, 0.36, 1]
     }
   }
-};
+} as any;
 
 export const AnimatedNavigationOverlay = ({ isOpen, onClose }: AnimatedNavigationOverlayProps) => {
   // Prevent scrolling when menu is open on mobile
@@ -94,7 +94,7 @@ export const AnimatedNavigationOverlay = ({ isOpen, onClose }: AnimatedNavigatio
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] as any }}
             onClick={() => onClose()}
             className="fixed inset-0 z-40 bg-[#000000]/60 backdrop-blur-md"
             aria-hidden="true"
