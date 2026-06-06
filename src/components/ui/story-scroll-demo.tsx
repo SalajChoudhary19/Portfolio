@@ -26,7 +26,7 @@ export default function FlowArtDefaultDemo() {
             style={{ backgroundColor: theme.bg, color: theme.color }}
           >
             <p className="text-xs font-bold uppercase tracking-[0.2em]">
-              0{index + 1} — {project.title}
+              {project.title}
             </p>
             <hr className={`my-[2vw] border-none border-t ${theme.border}`} />
             

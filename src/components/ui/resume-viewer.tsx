@@ -15,17 +15,9 @@ export const ResumeViewer = () => {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-      className="absolute top-0 left-0 right-0 z-[55] pb-10"
-    >
-      {/* Fixed background to completely hide the underlying page without breaking window scroll */}
-      <div className="fixed inset-0 bg-background -z-10 pointer-events-none" />
-      {/* Fixed Header with Back Button */}
-      <div className="fixed top-0 left-0 right-0 z-50 flex w-full items-center justify-end p-6 bg-gradient-to-b from-background to-transparent pointer-events-none">
+    <div className="w-full pb-10 pt-24">
+      {/* Header with Download Button */}
+      <div className="flex w-full items-center justify-end px-6 mb-4 pointer-events-none">
         <a
           href="/Resumemain.pdf"
           download="Salaj_Choudhary_Resume.pdf"
@@ -57,6 +49,6 @@ export const ResumeViewer = () => {
           />
         </div>
       </ContainerScroll>
-    </motion.div>
+    </div>
   );
 };
