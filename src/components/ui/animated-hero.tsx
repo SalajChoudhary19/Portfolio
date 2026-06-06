@@ -57,9 +57,6 @@ function Hero() {
 
           </div>
           <div className="flex flex-row gap-3">
-            <Button size="lg" className="gap-4" onClick={() => window.dispatchEvent(new CustomEvent('open-nav'))}>
-              Explore <MoveRight className="w-4 h-4" />
-            </Button>
           </div>
         </div>
       </div>

@@ -5,11 +5,7 @@ import { motion } from "framer-motion";
 import { MoveLeft, Download } from "lucide-react";
 import { ContainerScroll } from "./container-scroll-animation";
 
-interface ResumeViewerProps {
-  onClose: () => void;
-}
-
-export const ResumeViewer = ({ onClose }: ResumeViewerProps) => {
+export const ResumeViewer = () => {
   // Force window to top when opening so the absolute positioning aligns perfectly
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,17 +20,12 @@ export const ResumeViewer = ({ onClose }: ResumeViewerProps) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="absolute top-0 left-0 right-0 z-50 bg-background min-h-screen pb-10"
+      className="absolute top-0 left-0 right-0 z-[55] pb-10"
     >
+      {/* Fixed background to completely hide the underlying page without breaking window scroll */}
+      <div className="fixed inset-0 bg-background -z-10 pointer-events-none" />
       {/* Fixed Header with Back Button */}
-      <div className="fixed top-0 left-0 right-0 z-50 flex w-full items-center justify-between p-6 bg-gradient-to-b from-background to-transparent pointer-events-none">
-        <button
-          onClick={onClose}
-          className="pointer-events-auto flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium backdrop-blur-md transition-colors hover:bg-white/10"
-        >
-          <MoveLeft className="h-4 w-4" />
-          Back to Portfolio
-        </button>
+      <div className="fixed top-0 left-0 right-0 z-50 flex w-full items-center justify-end p-6 bg-gradient-to-b from-background to-transparent pointer-events-none">
         <a
           href="/Resumemain.pdf"
           download="Salaj_Choudhary_Resume.pdf"
@@ -60,7 +51,7 @@ export const ResumeViewer = ({ onClose }: ResumeViewerProps) => {
         {/* Render the actual PDF inside the 3D cinematic tablet screen */}
         <div className="h-full w-full overflow-hidden rounded-[2rem] bg-zinc-900/40">
           <iframe 
-            src="/Resumemain.pdf#toolbar=0&navpanes=0&scrollbar=0" 
+            src="/Resumemain.pdf#toolbar=0&navpanes=0" 
             className="w-full h-full border-none rounded-[2rem]"
             title="Salaj Choudhary Resume"
           />
