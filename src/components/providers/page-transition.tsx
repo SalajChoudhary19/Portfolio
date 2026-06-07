@@ -23,6 +23,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
   useEffect(() => {
     if (isLoading) {
       const timer = setTimeout(() => {
+        window.scrollTo(0, 0);
         setIsLoading(false);
       }, pathname === "/" ? 1500 : 1000); // slightly longer on first load if needed
       return () => clearTimeout(timer);
