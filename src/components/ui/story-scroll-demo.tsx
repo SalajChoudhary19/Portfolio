@@ -16,8 +16,7 @@ export default function FlowArtDefaultDemo() {
       {projects.map((project, index) => {
         const theme = themes[index % themes.length];
         
-        // Split the title roughly by words or spaces to stack them creatively like the demo
-        const titleWords = project.title.split(' ');
+        // Removed forced splitting to save vertical space so the bottom content fits
         
         return (
           <FlowSection 
@@ -25,25 +24,17 @@ export default function FlowArtDefaultDemo() {
             aria-label={project.title} 
             style={{ backgroundColor: theme.bg, color: theme.color }}
           >
-            <p className="text-xs font-bold uppercase tracking-[0.2em]">
-              {project.title}
-            </p>
-            <hr className={`my-[2vw] border-none border-t ${theme.border}`} />
+
             
             <div>
-              <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] uppercase tracking-tight break-words mt-4">
-                {titleWords.map((word, i) => (
-                  <span key={i}>
-                    {word}
-                    {i < titleWords.length - 1 && <br />}
-                  </span>
-                ))}
+              <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] uppercase tracking-tight break-words mt-2 max-w-[25ch] md:max-w-[35ch]">
+                {project.title}
               </h2>
             </div>
             
-            <hr className={`my-[2vw] border-none border-t ${theme.border}`} />
+            <hr className={`my-4 lg:my-[2vh] border-none border-t ${theme.border}`} />
             
-            <div className="mt-auto max-w-[65ch] space-y-4">
+            <div className="my-auto max-w-full md:max-w-[85ch] space-y-4">
               <p className="text-xl md:text-2xl font-semibold opacity-90">
                 {project.tagline}
               </p>
@@ -52,10 +43,10 @@ export default function FlowArtDefaultDemo() {
               </p>
             </div>
             
-            <hr className={`my-[2vw] border-none border-t ${theme.border}`} />
+            <hr className={`my-4 lg:my-[2vh] border-none border-t ${theme.border}`} />
             
-            {/* Technologies Grid representing the 3-column stats layout in demo */}
-            <div className="flex flex-wrap gap-[3vw]">
+            {/* Technologies Grid representing the stats layout */}
+            <div className="flex flex-wrap gap-4 md:gap-[2vw]">
               {project.features.map((feature, idx) => (
                 <div key={idx} className="min-w-[180px] flex-1">
                   <p className="mb-2 text-sm font-bold uppercase tracking-wider">{feature.title}</p>
