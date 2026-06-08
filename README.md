@@ -1,3 +1,3 @@
-# Portfolio
+# Hi, I'm Salaj
 
-Welcome to my portfolio! I'm Salaj Choudhary, an Information Technology student passionate about building meaningful solutions and continuously expanding my knowledge in software development. I enjoy turning ideas into practical applications, solving challenging problems, and creating experiences that combine functionality with thoughtful design. This portfolio represents my journey, projects, and growth as a developer.
+Welcome to my portfolio! I'm an CSE-Information Technology student passionate about building meaningful solutions and continuously expanding my knowledge in software development. I enjoy turning ideas into practical applications, solving challenging problems, and creating experiences that combine functionality with thoughtful design. This portfolio represents my journey, projects, and growth as a developer.
