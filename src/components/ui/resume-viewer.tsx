@@ -19,7 +19,7 @@ export const ResumeViewer = () => {
       {/* Header with Download Button */}
       <div className="flex w-full items-center justify-end px-6 mb-4 pointer-events-none">
         <a
-          href="/Resumemain.pdf"
+          href="/mainresume.pdf"
           download="Salaj_Choudhary_Resume.pdf"
           className="pointer-events-auto flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-lg transition-transform hover:scale-105"
         >
@@ -43,7 +43,7 @@ export const ResumeViewer = () => {
         {/* Render the actual PDF inside the 3D cinematic tablet screen */}
         <div className="h-full w-full overflow-hidden rounded-[2rem] bg-zinc-900/40">
           <iframe 
-            src="/Resumemain.pdf#toolbar=0&navpanes=0" 
+            src="/mainresume.pdf#toolbar=0&navpanes=0" 
             className="w-full h-full border-none rounded-[2rem]"
             title="Salaj Choudhary Resume"
           />
