@@ -16,7 +16,7 @@ export default function FlowArtDefaultDemo() {
       {projects.map((project, index) => {
         const theme = themes[index % themes.length];
         
-        // Removed forced splitting to save vertical space so the bottom content fits
+        
         
         return (
           <FlowSection 
@@ -45,7 +45,7 @@ export default function FlowArtDefaultDemo() {
             
             <hr className={`my-4 lg:my-[2vh] border-none border-t ${theme.border}`} />
             
-            {/* Technologies Grid representing the stats layout */}
+            
             <div className="flex flex-wrap gap-4 md:gap-[2vw]">
               {project.features.map((feature, idx) => (
                 <div key={idx} className="min-w-[180px] flex-1">
@@ -57,7 +57,7 @@ export default function FlowArtDefaultDemo() {
               ))}
             </div>
 
-            {/* Action button removed as per user request */}
+
           </FlowSection>
         );
       })}

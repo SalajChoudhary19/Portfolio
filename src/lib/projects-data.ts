@@ -65,26 +65,6 @@ export const projects: ProjectData[] = [
     ]
   },
   {
-    id: "naya-sawera-ngo",
-    title: "NAYA SAWERA NGO PLATFORM",
-    tagline: "Modern web platform focused on outreach, engagement, and accessibility.",
-    description: "Developed a responsive web application to strengthen community engagement, streamline volunteer onboarding, and simplify donation management processes for the organization. The platform emphasizes usability, accessibility, and performance while maintaining a scalable and maintainable frontend architecture. Reusable components, modern development practices, and optimized user flows were implemented to deliver a seamless experience across devices and browsers.",
-    features: [
-      {
-        title: "USER EXPERIENCE",
-        description: "Built reusable UI components with integrated validation, modal systems, responsive layouts, and dark mode support. Focused on creating a consistent and intuitive user experience while improving maintainability across the application."
-      },
-      {
-        title: "DONATION WORKFLOWS",
-        description: "Implemented secure donation and volunteer registration workflows with structured form handling, validation mechanisms, and reliable submission processes. Designed the system to support smooth user interactions and efficient data collection."
-      },
-      {
-        title: "ACCESSIBILITY",
-        description: "Optimized the platform for accessibility, responsiveness, and cross-browser compatibility. Applied modern frontend best practices to ensure consistent performance and usability across desktop, tablet, and mobile devices."
-      }
-    ]
-  },
-  {
     id: "student-database-management-system",
     title: "STUDENT DATABASE MANAGEMENT SYSTEM",
     tagline: "Hybrid database architecture for secure and efficient academic management.",
@@ -101,6 +81,26 @@ export const projects: ProjectData[] = [
       {
         title: "QUERY OPTIMIZATION",
         description: "Developed indexed search functionality, advanced filtering, and sorting mechanisms to improve retrieval performance. Optimized query execution and data access patterns to provide a responsive user experience across large datasets."
+      }
+    ]
+  },
+  {
+    id: "naya-sawera-ngo",
+    title: "NAYA SAWERA NGO PLATFORM",
+    tagline: "Modern web platform focused on outreach, engagement, and accessibility.",
+    description: "Developed a responsive web application to strengthen community engagement, streamline volunteer onboarding, and simplify donation management processes for the organization. The platform emphasizes usability, accessibility, and performance while maintaining a scalable and maintainable frontend architecture. Reusable components, modern development practices, and optimized user flows were implemented to deliver a seamless experience across devices and browsers.",
+    features: [
+      {
+        title: "USER EXPERIENCE",
+        description: "Built reusable UI components with integrated validation, modal systems, responsive layouts, and dark mode support. Focused on creating a consistent and intuitive user experience while improving maintainability across the application."
+      },
+      {
+        title: "DONATION WORKFLOWS",
+        description: "Implemented secure donation and volunteer registration workflows with structured form handling, validation mechanisms, and reliable submission processes. Designed the system to support smooth user interactions and efficient data collection."
+      },
+      {
+        title: "ACCESSIBILITY",
+        description: "Optimized the platform for accessibility, responsiveness, and cross-browser compatibility. Applied modern frontend best practices to ensure consistent performance and usability across desktop, tablet, and mobile devices."
       }
     ]
   }
