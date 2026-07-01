@@ -24,7 +24,7 @@ export default function AboutPage() {
       rotateX: 0,
       transition: {
         duration: 0.9,
-        ease: [0.21, 0.47, 0.32, 0.98], // Custom ease out
+        ease: [0.21, 0.47, 0.32, 0.98] as [number, number, number, number], // Custom ease out
       },
     },
   };
