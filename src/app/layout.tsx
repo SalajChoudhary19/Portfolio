@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 
 import PageTransition from "@/components/providers/page-transition";
 import { Navbar } from "@/components/ui/navbar";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Developer Portfolio",
@@ -36,6 +37,7 @@ export default function RootLayout({
         <React.Suspense fallback={null}>
           <PageTransition>{children}</PageTransition>
         </React.Suspense>
+        <Analytics />
       </body>
     </html>
   );
